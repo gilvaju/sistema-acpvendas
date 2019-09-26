@@ -14,7 +14,8 @@ class SalesController extends Controller
      */
     public function index()
     {
-        return Sale::all();
+        $sales = Sale::all();
+        return view('sales/index')->with(compact('sales'));
     }
 
     /**
@@ -24,7 +25,8 @@ class SalesController extends Controller
      */
     public function create()
     {
-        //
+        $sales = Sale::all();
+        return view('sales/create')->with(compact('sales'));
     }
 
     /**
@@ -33,9 +35,12 @@ class SalesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Sale $sale)
     {
-        //
+        $request = request(['date', 'pieces', 'value', 'trade_pieces', 'trade_value']);
+        $sale->create($request);
+        return redirect('/sales');
+
     }
 
     /**

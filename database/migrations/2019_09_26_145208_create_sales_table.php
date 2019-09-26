@@ -15,12 +15,12 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('date_sell');
-            $table->integer('pieces_trade');
-            $table->float('value_trade');
-            $table->integer('pieces_sell');
-            $table->float('value_sell');
-            $table->unsignedInteger('user_id');
+            $table->date('date');
+            $table->integer('pieces');
+            $table->float('value');
+            $table->integer('trade_pieces');
+            $table->float('trade_value');
+            $table->unsignedInteger('user_id')->default(1);
             $table->timestamps();
         });
     }
