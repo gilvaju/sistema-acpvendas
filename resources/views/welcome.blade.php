@@ -85,10 +85,10 @@
                 </div>
 
                 <div class="links">
-                    <a href={{ $teste = 0 }}"https://laravel.com/docs">Manual de Conduta</a>
-                    <a href="https://laracasts.com">Acompanhamento de Vendas</a>
-                    <a href="https://laravel-news.com">RH</a>
-                    <a href="https://blog.laravel.com">Gerência</a>
+                    <a href="{{ url('/') }}">Manual de Conduta</a>
+                    <a href="{{ url('/') }}">Acompanhamento de Vendas</a>
+                    <a href="{{ url('/') }}">RH</a>
+                    <a href="{{ url('/') }}">Gerência</a>
                 </div>
             </div>
         </div>

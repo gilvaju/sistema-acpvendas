@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () {
-    $teeste = 0;
     return view('welcome');
 });
 
