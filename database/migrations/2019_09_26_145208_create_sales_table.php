@@ -20,6 +20,7 @@ class CreateSalesTable extends Migration
             $table->float('value_trade');
             $table->integer('pieces_sell');
             $table->float('value_sell');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
