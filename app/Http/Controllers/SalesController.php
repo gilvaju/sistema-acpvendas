@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 class SalesController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,8 +35,7 @@ class SalesController extends Controller
      */
     public function create()
     {
-        $sales = Sale::all();
-        return view('sales/create')->with(compact('sales'));
+        return redirect('/sales');
     }
 
     /**
@@ -35,10 +44,9 @@ class SalesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Sale $sale)
+    public function store(Request $request, Sale $sale)
     {
-        $request = request(['date', 'pieces', 'value', 'trade_pieces', 'trade_value']);
-        $sale->create($request);
+        $sale->create($request->all());
         return redirect('/sales');
 
     }
@@ -85,6 +93,7 @@ class SalesController extends Controller
      */
     public function destroy(Sale $sale)
     {
-        //
+        $sale->delete();
+        return redirect('/sales');
     }
 }
