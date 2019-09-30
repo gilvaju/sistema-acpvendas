@@ -1,0 +1,49 @@
+/* Metas */
+
+.targets .card-app {
+    padding: 0.8rem 1rem 0.4rem 1rem;
+    background-color: #f8fafc;
+}
+
+.targets .card-app h6 {
+    font-size: 0.9rem;
+}
+
+.targets .card-app p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.targets .actual-day {
+    background-color: antiquewhite;
+}
+
+/* Dias da semana */
+
+.week-days .card-app {
+    padding: 0.8rem 1rem 0.4rem 1rem;
+    background-color: lightblue;
+}
+
+.week-days .card-app h6 {
+    font-size: 0.9rem;
+}
+
+.week-days .card-app p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* others app */
+
+.hr-app {
+    margin: 0 0 0 0;
+    padding: 0 0 1rem 0;
+}
+
+.section-divide {
+    margin: 0 0 0 0;
+    padding: 0 0 1rem 0;
+}
